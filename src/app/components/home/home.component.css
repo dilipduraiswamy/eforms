@@ -1,0 +1,28 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.header-logo {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.mat-tab-group {
+    margin-bottom: 48px;
+}
+
+.example-button-toggle-label {
+    display: inline-block;
+    margin: 16px;
+}
+
+::ng-deep .mat-ink-bar {
+    background-color: yellow !important;
+}
+
+.mat_card_custom_header {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

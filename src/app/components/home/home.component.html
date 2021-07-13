@@ -1,0 +1,72 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span class="header-logo">  <mat-icon>file_copy</mat-icon></span>
+
+
+        <span *ngIf="!canEditCode" (click)="editFormTitleText()">{{formText}}</span>
+        <!-- <span> <input matInput  [(ngModel)]="formText" type="text"  />    </span> -->
+
+
+        <mat-form-field class="example-form-field" appearance="legacy" *ngIf="canEditCode">
+
+            <input matInput type="text" [(ngModel)]="formText" (focusout)="onFormTitleTextFocusOut($event)">
+
+        </mat-form-field>
+
+        <button mat-icon-button (click)="changeStarIcon()">
+            <mat-icon >
+              {{starIconText}}
+            </mat-icon>
+            
+          </button>
+        <span class="example-spacer"></span>
+        <mat-icon class="header-logo">
+            format_paint
+        </mat-icon>
+
+        <button mat-raised-button color="warn">Send</button>
+
+        <!-- <span class="example-spacer"></span> -->
+        <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button> -->
+    </mat-toolbar-row>
+
+
+
+
+</mat-toolbar>
+
+
+
+
+<mat-tab-group color="accent" backgroundColor="primary" mat-align-tabs="center">
+    <mat-tab label="Questions">
+        .
+        <mat-card class="mat_card_custom_header">
+            <span *ngIf="!canEditCode" (click)="editFormTitleText()">{{formText}}</span>
+            <mat-form-field class="example-form-field" appearance="legacy" *ngIf="canEditCode">
+
+                <input matInput type="text" [(ngModel)]="formText" (focusout)="onFormTitleTextFocusOut($event)">
+
+            </mat-form-field>
+
+            <br>
+
+            <p>
+                <mat-form-field appearance="legacy" style="width:400px !important">
+
+                    <input matInput placeholder="Form Description">
+
+                </mat-form-field>
+            </p>
+
+
+
+
+
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Response"> Response </mat-tab>
+
+</mat-tab-group>
