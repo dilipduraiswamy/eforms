@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material/material.module';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { DndModule } from 'ngx-drag-drop';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    SweetAlert2Module.forRoot(),
+    DndModule
   ],
   providers: [],
   bootstrap: [AppComponent]
