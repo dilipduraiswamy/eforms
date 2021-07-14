@@ -19,7 +19,7 @@ import { value, field } from 'src/app/global.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  panelOpenState = false;
   primary_color:string='primary'
 
   formText:string='Untitled Form';
@@ -70,7 +70,7 @@ if(this.canEditCode){
  fieldModels:Array<field>=[
    {
      "type": "text",
-     "icon": "fa-font",
+     "icon": "font_download",
      "label": "Text",
      "description": "Enter your name",
      "placeholder": "Enter your name",
@@ -81,7 +81,7 @@ if(this.canEditCode){
    },
    {
      "type": "email",
-     "icon": "fa-envelope",
+     "icon": "email",
      "required": true,
      "label": "Email",
      "description": "Enter your email",
@@ -94,7 +94,7 @@ if(this.canEditCode){
    },
    {
      "type": "phone",
-     "icon": "fa-phone",
+     "icon": "phone",
      "label": "Phone",
      "description": "Enter your phone",
      "placeholder": "Enter your phone",
@@ -107,7 +107,7 @@ if(this.canEditCode){
    {
      "type": "number",
      "label": "Number",
-     "icon": "fa-html5",
+     "icon": "format_list_numbered",
      "description": "Age",
      "placeholder": "Enter your age",
      "className": "form-control",
@@ -117,26 +117,26 @@ if(this.canEditCode){
    },
    {
      "type": "date",
-     "icon":"fa-calendar",
+     "icon":"calendar_today",
      "label": "Date",
      "placeholder": "Date",
      "className": "form-control"
    },
    {
      "type": "datetime-local",
-     "icon":"fa-calendar",
+     "icon":"date_range",
      "label": "DateTime",
      "placeholder": "Date Time",
      "className": "form-control"
    },
    {
      "type": "textarea",
-     "icon":"fa-text-width",
+     "icon":"text_fields",
      "label": "Textarea" 
    },
    {
      "type": "paragraph",
-     "icon": "fa-paragraph",
+     "icon": "format_indent_increase",
      "label": "Paragraph",
      "placeholder": "Type your text to display here only" 
    },
@@ -144,7 +144,7 @@ if(this.canEditCode){
      "type": "checkbox",
      "required": true,
      "label": "Checkbox",
-     "icon":"fa-list",
+     "icon":"check_box",
      "description": "Checkbox",
      "inline": true,
      "values": [
@@ -160,7 +160,7 @@ if(this.canEditCode){
    },
    {
      "type": "radio",
-     "icon":"fa-list-ul",
+     "icon":"radio_button_checked",
      "label": "Radio",
      "description": "Radio boxes",
      "values": [
@@ -176,7 +176,7 @@ if(this.canEditCode){
    },
    {
      "type": "autocomplete",
-     "icon":"fa-bars",
+     "icon":"menu",
      "label": "Select",
      "description": "Select",
      "placeholder": "Select",
@@ -198,14 +198,14 @@ if(this.canEditCode){
    },
    {
      "type": "file",
-     "icon":"fa-file",
+     "icon":"attach_file",
      "label": "File Upload",
      "className": "form-control",
      "subtype": "file"
    },
    {
      "type": "button",
-     "icon":"fa-paper-plane",
+     "icon":"send",
      "subtype": "submit",
      "label": "Submit"
    }
@@ -228,20 +228,7 @@ if(this.canEditCode){
 
  
 
-//  ngOnInit() {
-//    // this.route.params.subscribe( params =>{
-//    //   console.log(params);
-//    //   this.us.getDataApi('/admin/getFormById',{id:params.id}).subscribe(r=>{
-//    //     console.log(r);
-//    //     this.model = r['data'];
-//    //   });
-//    // });
-
-
-//    // this.model = this.cs.data; 
-//    // console.log(this.model.data);
-
-//  }
+ 
 
  onDragStart(event:DragEvent) {
    console.log("drag started", JSON.stringify(event, null, 2));
